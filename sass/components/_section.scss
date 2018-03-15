@@ -1,0 +1,171 @@
+#fullpage {
+  width: 100%;
+}
+
+.section {
+  background-size: cover;
+  background-position: top center;
+
+  &:nth-of-type(1) {
+    background-color: $color-bg-01;
+  }
+  &:nth-of-type(2) {
+    background-color: $color-bg-02;
+    background-image: url(../imgs/section02_bg.png);
+  }
+  &:nth-of-type(3) {
+    background-color: $color-bg-03;
+    background-image: url(../imgs/section03_bg.png);
+  }
+  &:nth-of-type(4) {
+    background-color: $color-bg-04;
+    background-image: url(../imgs/section04_bg.png);
+  }
+  &:nth-of-type(5) {
+    background-color: $color-bg-05;
+    background-image: url(../imgs/section05_bg.png);
+  }
+  &:nth-of-type(6) {
+    background-color: $color-bg-06;
+    background-image: url(../imgs/section06_bg.png);
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.section__container {
+  @extend %display-flex;
+
+  min-width: 320px;
+  height: 100%;
+  margin: 0 auto;
+  transition: width .5s ease;
+
+  &--01 {
+    @include flex-direction-column;
+    @include justify-content-space-around;
+    @include align-items-center;
+
+    .section__img {
+      width: 70%;
+    }
+
+    .section__logo {
+      width: 35%;
+    }
+  }
+
+  &--02,
+  &--03,
+  &--04,
+  &--05,
+  &--06 {
+    @include flex-direction-column;
+    @include justify-content-space-between;
+    @include align-items-center;
+
+    .section__detail {
+      width: 70%;
+      @include flex-grow(1);
+
+      @extend %display-flex;
+      @include flex-direction-column;
+      @include justify-content-space-around;
+      @include align-items-center;
+
+      .section__text {
+        width: 100%;
+      }
+
+      .section__box {
+        width: 60%;
+      }
+    }
+
+    .section__cake {
+      width: 100%;
+      max-height: 350px;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-md-min) {
+  .section__container {
+    &--01 {
+      width: 90%;
+
+      @include flex-direction-row;
+      @include justify-content-space-around;
+
+      .section__img {
+        width: 50%;
+      }
+
+      .section__logo {
+        width: 22%;
+      }
+    }
+
+    &--02,
+    &--03,
+    &--04,
+    &--05,
+    &--06 {
+      .section__detail {
+        width: 450px;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-lg-min) {
+  .section__container {
+    &--01 {
+      width: 1000px;
+
+      @include justify-content-space-between;
+
+      .section__img {
+        width: 60%;
+      }
+
+      .section__logo {
+        width: 25%;
+      }
+    }
+
+    &--02,
+    &--03,
+    &--04,
+    &--05,
+    &--06 {
+      .section__detail {
+        width: 500px;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-xl-min) {
+  .section__container {
+    &--01 {
+      width: 1200px;
+    }
+
+    &--02,
+    &--03,
+    &--04,
+    &--05,
+    &--06 {
+      .section__detail {
+        width: 550px;
+
+        .section__box {
+          width: 70%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+#fp-nav ul li {
+  &:nth-of-type(1) a span {
+    background-color: $color-indicator-01;
+  }
+  &:nth-of-type(2) a span {
+    background-color: $color-indicator-02;
+  }
+  &:nth-of-type(3) a span {
+    background-color: $color-indicator-03;
+  }
+  &:nth-of-type(4) a span {
+    background-color: $color-indicator-04;
+  }
+  &:nth-of-type(5) a span {
+    background-color: $color-indicator-05;
+  }
+  &:nth-of-type(6) a span {
+    background-color: $color-indicator-06;
+  }
+}
