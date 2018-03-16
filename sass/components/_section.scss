@@ -78,17 +78,31 @@
       @include align-items-center;
 
       .section__text {
+        display: none;
         width: 100%;
       }
 
       .section__box {
+        display: none;
         width: 60%;
       }
     }
 
     .section__cake {
+      display: none;
       width: 100%;
       max-height: 350px;
+    }
+
+    a {
+      img {
+        transition: all .5s ease;
+        transform-origin: bottom center;
+      }
+
+      &:hover img {
+        transform: scale(1.2);
+      }
     }
   }
 }
@@ -147,14 +161,6 @@
     &--06 {
       .section__detail {
         width: 450px;
-      }
-
-      a {
-        transition: transform .5s ease;
-
-        &:hover {
-          transform: scale(1.2) translateY(-5px);
-        }
       }
     }
   }
