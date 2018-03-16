@@ -12,7 +12,7 @@
           $section
             .find('.section__img')
             .addClass('animated')
-            .addClass('rollIn')
+            .addClass('slideInLeft')
             .show();
 
           $section
@@ -47,7 +47,7 @@
           $section
             .find('.section__img')
             .removeClass('animated')
-            .removeClass('rollIn')
+            .removeClass('slideInLeft')
             .fadeOut();
 
           $section

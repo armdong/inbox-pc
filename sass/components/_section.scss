@@ -100,8 +100,11 @@
         transform-origin: bottom center;
       }
 
-      &:hover img {
+      &.section__box:hover img {
         transform: scale(1.2);
+      }
+      &.section__cake:hover img {
+        transform: scale(1.1);
       }
     }
   }
@@ -135,17 +138,6 @@
 
         &:hover::after {
           background-color: rgba($color-black, 0);
-        }
-
-        img {
-          transition: all .5s ease;
-          transform: scale(1.2) rotate(5deg);
-        }
-
-        &:hover {
-          img {
-            transform: scale(1) rotate(0deg);
-          }
         }
       }
 
