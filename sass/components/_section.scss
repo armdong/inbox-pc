@@ -32,6 +32,8 @@
 
   img {
     width: 100%;
+    border: none;
+    vertical-align: top;
   }
 }
 
@@ -101,6 +103,36 @@
 
       .section__img {
         width: 50%;
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+          content: '';
+          display: block;
+
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-color: rgba($color-black, .5);
+          transition: background-color .5s ease;
+        }
+
+        &:hover::after {
+          background-color: rgba($color-black, 0);
+        }
+
+        img {
+          transition: all .5s ease;
+          transform: scale(1.2) rotate(5deg);
+        }
+
+        &:hover {
+          img {
+            transform: scale(1) rotate(0deg);
+          }
+        }
       }
 
       .section__logo {
@@ -115,6 +147,14 @@
     &--06 {
       .section__detail {
         width: 450px;
+      }
+
+      a {
+        transition: transform .5s ease;
+
+        &:hover {
+          transform: scale(1.2) translateY(-5px);
+        }
       }
     }
   }
